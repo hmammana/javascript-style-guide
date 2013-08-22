@@ -1,4 +1,4 @@
-javascript-style-guide
-======================
+# JavaScript Style Guide
+
 
 MercadoLibre JavaScript Style Guide
