@@ -23,4 +23,4 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 
 Licensed under the MIT license.
 
-Copyright (c) 2012 MercadoLibre, http://www.mercadolibre.com/
+Copyright (c) 2013 MercadoLibre, http://www.mercadolibre.com/
