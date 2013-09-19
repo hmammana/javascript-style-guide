@@ -18,3 +18,9 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 
 ## Table of contents
 ### [WIP]
+
+## License
+
+Licensed under the MIT license.
+
+Copyright (c) 2012 MercadoLibre, http://www.mercadolibre.com/
