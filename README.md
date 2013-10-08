@@ -32,6 +32,46 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - Control Flow / Conditionals
 - Modules
 
+## Scaffolding
+### [WIP]
+
+## Comments 
+### [WIP]
+
+## Indentation
+### [WIP]
+
+## Commas & Semicolons
+### [WIP]
+
+## Built-in Object
+### [WIP]
+
+## Operators
+### [WIP]
+
+## Variables
+### [WIP]
+
+## Functions
+### [WIP]
+
+## Hoisting
+### [WIP]
+
+## Loops
+### [WIP]
+
+## Events
+### [WIP]
+
+## Control Flow / Conditionals
+### [WIP]
+
+## Modules
+### [WIP]
+
+
 ## License
 
 Licensed under the MIT license.
