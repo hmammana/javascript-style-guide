@@ -17,7 +17,20 @@ By writing clean code, we are able to:
 by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifiers/)
 
 ## Table of contents
-### [WIP]
+
+- Scaffolding
+- Comments 
+- Indentation
+- Commas & Semicolons
+- Built-in Object
+- Operators
+- Variables
+- Functions
+- Hoisting
+- Loops
+- Events
+- Control Flow / Conditionals
+- Modules
 
 ## License
 
