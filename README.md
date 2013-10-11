@@ -48,14 +48,14 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
     ```js
     // Good :)
     var foo,
-      bar,
-      foobar;
+        bar,
+        foobar;
 
     // Good :)
     var map = {
-    'foo': 'foo',
-    'bar': 'bar',
-    'foobar': 'foobar'
+        'foo': 'foo',
+        'bar': 'bar',
+        'foobar': 'foobar'
     };
     ```
 - We don't use "Comma-First" style.
@@ -67,9 +67,9 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 
     // Bad :(
     var map = {
-          'foo': 'foo'
-        , 'bar': 'bar'
-        , 'foobar': 'foobar'
+        'foo': 'foo'
+      , 'bar': 'bar'
+      , 'foobar': 'foobar'
     };
     ```
 
