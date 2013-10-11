@@ -71,6 +71,24 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
       , 'foobar': 'foobar'
     };
     ```
+
+### Semicolons
+
+- We always put a semicolon at the end of the line.
+    ```js
+    // Good :)
+    (function () {
+        var foo = 'foobar';
+        return foo;
+    }());
+
+    // Bad :(
+    (function () {
+        var foo = 'foobar'
+        return foo
+    }())
+    ```
+
 - We don't put semicolons at the end of
     - loops statements (`for`, `for...in`, `while`, `do...while`)
 
@@ -101,23 +119,6 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
         // Bad :(
         var foo = new Object();
         ```
-
-### Semicolons
-
-- We always put a semicolon at the end of the line.
-    ```js
-    // Good :)
-    (function () {
-        var foo = 'foobar';
-        return foo;
-    }());
-
-    // Bad :(
-    (function () {
-        var foo = 'foobar'
-        return foo
-    }())
-    ```
 
 ## Literals
 
