@@ -44,7 +44,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 ## Commas & Semicolons
 
 ### Commas
-- We always put the comma at the end of the line.
+- We put the comma at the end of the line.
     
     ```js
     // Good :)
@@ -71,6 +71,36 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
       , 'foobar': 'foobar'
     };
     ```
+- We don't put semicolons at the end of
+    - loops statements (`for`, `for...in`, `while`, `do...while`)
+
+        ```js
+        // Good :)
+        var foo = {};
+        
+        // Bad :(
+        var foo = new Object();
+        ```
+        
+    - conditionals statements (`if...else`, `switch`)
+
+        ```js
+        // Good :)
+        var foo = {};
+        
+        // Bad :(
+        var foo = new Object();
+        ```
+        
+    - funcions declarations
+
+        ```js
+        // Good :)
+        var foo = {};
+        
+        // Bad :(
+        var foo = new Object();
+        ```
 
 ### Semicolons
 
