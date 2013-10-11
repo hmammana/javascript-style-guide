@@ -42,53 +42,53 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 ### [WIP]
 
 ## Commas & Semicolons
+
 ### Commas
-
-- We don't use "Comma-First" style.
 - We always put the comma at the end of the line.
+    ```js
+    // Good :)
+    var foo,
+      bar,
+      foobar;
 
-```js
-// Bad :(
-var foo
-  , bar
-  , foobar;
+    // Good :)
+    var map = {
+    'foo': 'foo',
+    'bar': 'bar',
+    'foobar': 'foobar'
+    };
+    ```
+- We don't use "Comma-First" style.
+    ```js
+    // Bad :(
+    var foo
+      , bar
+      , foobar;
 
-// Bad :(
-var map = {
-    'foo': 'foo'
-  , 'bar': 'bar'
-  , 'foobar': 'foobar'
-};
-
-// Good :)
-var foo,
-    bar,
-    foobar;
-
-// Good :)
-var map = {
-  'foo': 'foo',
-  'bar': 'bar',
-  'foobar': 'foobar'
-};
-```
+    // Bad :(
+    var map = {
+          'foo': 'foo'
+        , 'bar': 'bar'
+        , 'foobar': 'foobar'
+    };
+    ```
 
 ### Semicolons
+
 - We always put a semicolon at the end of the line.
+    ```js
+    // Bad :(
+    (function () {
+        var foo = 'foobar'
+        return foo
+    }())
 
-```js
-// Bad :(
-(function () {
-  var foo = 'foobar'
-  return foo
-}())
-
-// Good :)
-(function () {
-  var foo = 'foobar';
-  return foo;
-}());
-```
+    // Good :)
+    (function () {
+        var foo = 'foobar';
+        return foo;
+    }());
+    ```
 
 ## Built-in Object
 ### [WIP]
