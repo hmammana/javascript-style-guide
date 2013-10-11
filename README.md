@@ -45,6 +45,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 
 ### Commas
 - We always put the comma at the end of the line.
+    
     ```js
     // Good :)
     var foo,
@@ -57,9 +58,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
         'bar': 'bar',
         'foobar': 'foobar'
     };
-    ```
-- We don't use "Comma-First" style.
-    ```js
+    
     // Bad :(
     var foo
       , bar
@@ -77,17 +76,17 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 
 - We always put a semicolon at the end of the line.
     ```js
-    // Bad :(
-    (function () {
-        var foo = 'foobar'
-        return foo
-    }())
-
     // Good :)
     (function () {
         var foo = 'foobar';
         return foo;
     }());
+
+    // Bad :(
+    (function () {
+        var foo = 'foobar'
+        return foo
+    }())
     ```
 
 ## Built-in Object
