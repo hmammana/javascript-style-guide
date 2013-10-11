@@ -22,7 +22,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - Comments 
 - Indentation
 - [Commas & Semicolons](#commas--semicolons)
-- Built-in Object
+- [Literals](#literals)
 - Operators
 - Variables
 - Functions
@@ -89,8 +89,25 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
     }())
     ```
 
-## Built-in Object
-### [WIP]
+## Literals
+
+- We use the array literal notation.
+    ```js
+    // Good :)
+    var foo = [];
+    
+    // Bad :(
+    var foo = new Array();
+    ```
+
+- We use the object literal notation.
+    ```js
+    // Good :)
+    var foo = {};
+    
+    // Bad :(
+    var foo = new Object();
+    ```
 
 ## Operators
 ### [WIP]
