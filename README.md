@@ -94,30 +94,42 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 
         ```js
         // Good :)
-        var foo = {};
+        for (var i = 0; i < 10; i += 1) {
+            foo += i;
+        }
         
         // Bad :(
-        var foo = new Object();
+        for (var i = 0; i < 10; i += 1) {
+            foo += i;
+        };
         ```
         
     - conditionals statements (`if...else`, `switch`)
 
         ```js
         // Good :)
-        var foo = {};
+        if (foo !== undefined) {
+            return foo;
+        }
         
         // Bad :(
-        var foo = new Object();
+        if (foo !== undefined) {
+            return foo;
+        };
         ```
         
     - funcions declarations
 
         ```js
         // Good :)
-        var foo = {};
+        function foo() {
+            return 'foobar';
+        }
         
         // Bad :(
-        var foo = new Object();
+        function foo() {
+            return 'foobar';
+        };
         ```
 
 ## Literals
