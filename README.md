@@ -27,7 +27,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - Variables
 - Functions
 - Hoisting
-- Loops
+- [Loops](#loops)
 - Events
 - Control Flow / Conditionals
 - Modules
@@ -165,7 +165,37 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 ### [WIP]
 
 ## Loops
-### [WIP]
+
+### for
+
+- We declare variables outside of the For statement.
+- We dont't use the increment operator.
+- We don'r calculate the length on each iteration.
+- We don't put semicolon at the end of the for statement.
+
+    ```js
+    // Good :)
+    var x,
+        i = 0,
+        len = foo.length;
+        
+    for (x in foo) {
+        console.log('foobar');
+    }
+
+    for (i; i < len; i += 1) {
+        console.log('foobar');
+    }
+
+    // Bad :(
+    for(var x in foo){
+        console.log('foobar');
+    };
+
+    for(i = 0; i < foo.length; i++){
+        console.log('foobar');
+    };
+    ```
 
 ## Events
 ### [WIP]
