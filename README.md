@@ -168,7 +168,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 
 ### for
 
-- We declare variables outside of the For statement.
+- We declare variables outside of the for statement.
 - We dont't use the increment operator.
 - We don't calculate the length on each iteration.
 - We don't put semicolon at the end of the for statement.
