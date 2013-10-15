@@ -20,7 +20,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 
 - Scaffolding
 - Comments 
-- Indentation
+- [Spacing](#spacing)
 - [Commas & Semicolons](#commas--semicolons)
 - [Literals](#literals)
 - Operators
@@ -38,8 +38,10 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 ## Comments 
 ### [WIP]
 
-## Indentation
-### [WIP]
+## Spacing
+- We use 4 spaces over tabs for indentation.
+- We don't put whitespace at the end of line or on blank lines.
+- We don't mix spaces and tabs.
 
 ## Commas & Semicolons
 
