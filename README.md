@@ -95,12 +95,12 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
         ```js
         // Good :)
         for (var i = 0; i < 10; i += 1) {
-            foo += i;
+            console.log('foobar');
         }
         
         // Bad :(
         for (var i = 0; i < 10; i += 1) {
-            foo += i;
+            console.log('foobar');
         };
         ```
         
@@ -109,12 +109,12 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
         ```js
         // Good :)
         if (foo !== undefined) {
-            return foo;
+            console.log('foobar');
         }
         
         // Bad :(
         if (foo !== undefined) {
-            return foo;
+            console.log('foobar');
         };
         ```
         
@@ -123,12 +123,12 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
         ```js
         // Good :)
         function foo() {
-            return 'foobar';
+            console.log('foobar');
         }
         
         // Bad :(
         function foo() {
-            return 'foobar';
+            console.log('foobar');
         };
         ```
 
