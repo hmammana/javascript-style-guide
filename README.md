@@ -174,6 +174,8 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - We dont't use the increment operator.
 - We don't calculate the length on each iteration.
 - We don't put semicolon at the end of the for statement.
+- We put a space between 'for' and '('.
+- We put a space between ')' and '{'.
 
     ```js
     // Good :)
