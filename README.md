@@ -43,6 +43,26 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - We don't put whitespace at the end of line or on blank lines.
 - We don't mix spaces and tabs.
 
+```js
+// Good :)
+function foo() {
+····console.log('foobar');
+};
+
+// Bad :(
+function foo() {
+----console.log('foobar');
+};
+
+function foo() {
+··console.log('foobar');
+};
+
+function foo() {
+    console.log('foobar');····
+};··
+```
+
 ## Commas & Semicolons
 
 ### Commas
