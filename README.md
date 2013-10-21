@@ -39,9 +39,9 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 ### [WIP]
 
 ## Spacing
-- We use 4 spaces over tabs for indentation.
-- We don't put whitespace at the end of line or on blank lines.
-- We don't mix spaces and tabs.
+- Use 4 spaces for indentation. Don't use tabs.
+- Don't mix spaces and tabs.
+- Don't put whitespace at the end of line or on blank lines.
 
 ```js
 // Good :)
@@ -66,7 +66,7 @@ function foo() {
 ## Commas & Semicolons
 
 ### Commas
-- We put the comma at the end of the line.
+- Put the comma at the end of the line.
     
     ```js
     // Good :)
@@ -96,7 +96,7 @@ function foo() {
 
 ### Semicolons
 
-- We always put a semicolon at the end of the line.
+- Always put a semicolon at the end of the line.
     ```js
     // Good :)
     (function () {
@@ -111,7 +111,7 @@ function foo() {
     }())
     ```
 
-- We don't put semicolons at the end of
+- Don't put semicolons at the end of
     - loops statements (`for`, `for...in`, `while`, `do...while`)
 
         ```js
@@ -156,7 +156,7 @@ function foo() {
 
 ## Literals
 
-- We use the array literal notation.
+- Use the array literal notation.
     ```js
     // Good :)
     var foo = [];
@@ -165,7 +165,7 @@ function foo() {
     var foo = new Array();
     ```
 
-- We use the object literal notation.
+- Use the object literal notation.
     ```js
     // Good :)
     var foo = {};
@@ -190,12 +190,12 @@ function foo() {
 
 ### for
 
-- We declare variables outside of the for statement.
-- We dont't use the increment operator.
-- We don't calculate the length on each iteration.
-- We don't put semicolon at the end of the for statement.
-- We put a space between 'for' and '('.
-- We put a space between ')' and '{'.
+- Declare variables outside of the for statement.
+- Dont't use the increment operator.
+- Don't calculate the length on each iteration.
+- Don't put semicolon at the end of the for statement.
+- Put a space between 'for' and '('.
+- Put a space between ')' and '{'.
 
     ```js
     // Good :)
