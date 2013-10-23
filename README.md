@@ -44,134 +44,134 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - Don't put whitespace at the end of line or on blank lines.
 
 ```js
-// Good :)
-function foo() {
-····console.log('foobar');
-};
-
-// Bad :(
+// Bad
 function foo() {
 ----console.log('foobar');
 };
 
+// Bad
 function foo() {
 ··console.log('foobar');
 };
 
+// Bad
 function foo() {
     console.log('foobar');····
 };··
+
+// Good!
+function foo() {
+····console.log('foobar');
+};
 ```
 
 ## Commas & Semicolons
 
 ### Commas
 - Put the comma at the end of the line.
+- Don't put the comma at the end of the last property.
     
-    ```js
-    // Good :)
-    var foo,
-        bar,
-        foobar;
+```js
+// Bad
+var map = {
+    'foo': 'foo'
+  , 'bar': 'bar'
+  , 'foobar': 'foobar'
+};
 
-    // Good :)
-    var map = {
-        'foo': 'foo',
-        'bar': 'bar',
-        'foobar': 'foobar'
-    };
-    
-    // Bad :(
-    var foo
-      , bar
-      , foobar;
+// Bad
+var map = {
+    'foo': 'foo',
+    'bar': 'bar',
+    'foobar': 'foobar',
+};
 
-    // Bad :(
-    var map = {
-        'foo': 'foo'
-      , 'bar': 'bar'
-      , 'foobar': 'foobar'
-    };
-    ```
+// Good :)
+var map = {
+    'foo': 'foo',
+    'bar': 'bar',
+    'foobar': 'foobar'
+};
+```
 
 ### Semicolons
 
 - Always put a semicolon at the end of the line.
     ```js
-    // Good :)
-    (function () {
-        var foo = 'foobar';
-        return foo;
-    }());
-
-    // Bad :(
+    // Bad
     (function () {
         var foo = 'foobar'
         return foo
     }())
+
+    // Good
+    (function () {
+        var foo = 'foobar';
+        return foo;
+    }());
     ```
 
 - Don't put semicolons at the end of
     - loops statements (`for`, `for...in`, `while`, `do...while`)
 
         ```js
-        // Good :)
-        for (var i = 0; i < 10; i += 1) {
-            console.log('foobar');
-        }
-        
-        // Bad :(
+        // Bad
         for (var i = 0; i < 10; i += 1) {
             console.log('foobar');
         };
+
+        // Good
+        for (var i = 0; i < 10; i += 1) {
+            console.log('foobar');
+        }
         ```
         
     - conditionals statements (`if...else`, `switch`)
 
         ```js
-        // Good :)
-        if (foo !== undefined) {
-            console.log('foobar');
-        }
-        
-        // Bad :(
+        // Bad
         if (foo !== undefined) {
             console.log('foobar');
         };
+
+        // Good
+        if (foo !== undefined) {
+            console.log('foobar');
+        }
         ```
         
     - funcions declarations
 
         ```js
-        // Good :)
-        function foo() {
-            console.log('foobar');
-        }
-        
-        // Bad :(
+        // Bad
         function foo() {
             console.log('foobar');
         };
+
+        // Good
+        function foo() {
+            console.log('foobar');
+        }
         ```
 
 ## Literals
 
 - Use the array literal notation.
     ```js
-    // Good :)
-    var foo = [];
-    
-    // Bad :(
+    // Bad
     var foo = new Array();
+
+    // Good
+    var foo = [];
     ```
 
 - Use the object literal notation.
     ```js
-    // Good :)
-    var foo = {};
-    
-    // Bad :(
+    // Bad
     var foo = new Object();
+
+    // Good
+    var foo = {};
     ```
 
 ## Operators
@@ -179,6 +179,18 @@ function foo() {
 
 ## Variables
 ### [WIP]
+
+```js
+// Bad
+var foo;
+var bar;
+var foobar;
+
+// Good
+var foo,
+    bar,
+    foobar;
+```
 
 ## Functions
 ### [WIP]
@@ -197,29 +209,41 @@ function foo() {
 - Put a space between 'for' and '('.
 - Put a space between ')' and '{'.
 
-    ```js
-    // Good :)
-    var x,
-        i = 0,
-        len = foo.length;
-        
-    for (x in foo) {
-        console.log('foobar');
-    }
+```js
+// Bad
+for(i = 0; i < foo.length; i++){
+    console.log('foobar');
+};
 
-    for (i; i < len; i += 1) {
-        console.log('foobar');
-    }
+for(var i = 0; i < foo.length; i++){
+    console.log('foobar');
+};
 
-    // Bad :(
-    for(var x in foo){
-        console.log('foobar');
-    };
+// Bad
+for(x in foo){
+    console.log('foobar');
+};
 
-    for(i = 0; i < foo.length; i++){
-        console.log('foobar');
-    };
-    ```
+// Bad
+for(var x in foo){
+    console.log('foobar');
+};
+
+// Good
+var i = 0,
+    len = foo.length;
+
+for (i; i < len; i += 1) {
+    console.log('foobar');
+}
+
+// Good
+var x;
+
+for (x in foo) {
+    console.log('foobar');
+}
+```
 
 ## Events
 ### [WIP]
