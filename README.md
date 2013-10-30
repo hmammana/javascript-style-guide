@@ -24,7 +24,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - [Commas & Semicolons](#commas--semicolons)
 - [Literals](#literals)
 - Operators
-- Variables
+- [Variables](#variables)
 - Functions
 - Hoisting
 - [Loops](#loops)
@@ -178,19 +178,56 @@ var map = {
 ### [WIP]
 
 ## Variables
-### [WIP]
 
-```js
-// Bad
-var foo;
-var bar;
-var foobar;
+- Don't use global variables.
+- Name it in *lowerCamelCase*.
+- Use one space before and after assignment.
+    ```js
+    // Bad
+    var foo='bar';
 
-// Good
-var foo,
-    bar,
-    foobar;
-```
+    // Good
+    var foo·=·'bar';
+    ```
+
+- Declare many variables in one statement. Use different lines for each variable.
+    ```js
+    // Bad
+    var foo;
+    var bar;
+    var baz;
+
+    // Bad
+    var foo, bar, baz;
+
+    // Good
+    var foo,
+        bar,
+        baz;
+    ```
+
+- Begin with $ the name of variables that contains a jQuery/Zepto element.
+    ```js
+    // Bad
+    var container = $('#foo');
+
+    // Good
+    var $container = $('#foo');
+    ```
+
+- Define all variables on top.
+    ```js
+    // Bad
+    var foo;
+    bar();
+    var baz = 'example';
+
+    // Good
+    var foo,
+        baz;
+    bar();
+    baz = 'example';
+    ```
 
 ## Functions
 ### [WIP]
