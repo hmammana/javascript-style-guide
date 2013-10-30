@@ -23,7 +23,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - [Spacing](#spacing)
 - [Commas & Semicolons](#commas--semicolons)
 - [Literals](#literals)
-- Operators
+- [Operators](#operators)
 - [Variables](#variables)
 - Functions
 - Hoisting
@@ -175,7 +175,37 @@ var map = {
     ```
 
 ## Operators
-### [WIP]
+
+### Logical
+
+- Use one space between operators.
+    ```js
+    // Bad
+    foo||bar;
+
+    // Good
+    foo·||·baz;
+    ```
+
+### Arithmetic
+
+- Use the assignment operator instead the increment or decrement operator.
+    ```js
+    // Bad
+    foo++;
+
+    // Good
+    foo += 1;
+    ```
+
+- Use one space between operators.
+    ```js
+    // Bad
+    (1+2)*3;
+
+    // Good
+    (1·+·2)·*·3;
+    ```
 
 ## Variables
 
