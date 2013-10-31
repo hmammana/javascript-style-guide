@@ -345,6 +345,7 @@ while·(i < foo.length)·{
 - Put a space between 'while' and '('.
 - Put a space between ')' and '{'.
 
+```js
 // Bad
 var i = 0;
 
