@@ -282,6 +282,7 @@ for(i = 0; i < foo.length; i++){
     console.log('foobar');
 };
 
+// Bad
 for(var i = 0; i < foo.length; i++){
     console.log('foobar');
 };
@@ -300,16 +301,74 @@ for(var x in foo){
 var i = 0,
     len = foo.length;
 
-for (i; i < len; i += 1) {
+for·(i; i < len; i += 1)·{
     console.log('foobar');
 }
 
 // Good
 var x;
 
-for (x in foo) {
+for·(x in foo)·{
     console.log('foobar');
 }
+```
+
+### while
+- Don't calculate the length on each iteration.
+- Don't put semicolon at the end of the for statement.
+- Put a space between 'while' and '('.
+- Put a space between ')' and '{'.
+
+```js
+// Bad
+var i = 0;
+
+while(i < foo.length){
+    console.log('foobar');
+    i++;
+};
+
+// Good
+var i = 0;
+
+while·(i < foo.length)·{
+    console.log('foobar');
+    i += 1;
+}
+```
+
+### do...while
+- Put semicolon at the end of the do...while statement.
+- Don't calculate the length on each iteration.
+- Put a space between 'do' and '{'.
+- Put a space between '}' and 'while'.
+- Put a space between 'while' and '('.
+- Put a space between ')' and '{'.
+
+// Bad
+var i = 0;
+
+do{
+   i++;
+   document.write(i);
+}while (i < 5)
+
+// Good
+var i = 0;
+
+do·{
+   i += 1;
+   document.write(i);
+}·while·(i < 5);
+```
+
+### forEach
+- Use `forEach` statement to iterate an array.
+
+```js
+arr.forEach(function (x) {
+    console.log(x);
+});
 ```
 
 ## Events
