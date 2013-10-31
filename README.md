@@ -468,4 +468,4 @@ Use `jshint` with the following configuration:
 
 Licensed under the MIT license.
 
-Copyright (c) 2013 MercadoLibre, http://www.mercadolibre.com/
+Copyright (c) 2013 [MercadoLibre](https://github.com/mercadolibre).
