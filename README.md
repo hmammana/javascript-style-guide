@@ -31,6 +31,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - Events
 - Control Flow / Conditionals
 - Modules
+- [Linting](#linting)
 
 ## Scaffolding
 ### [WIP]
@@ -68,8 +69,10 @@ function foo() {
 ## Commas & Semicolons
 
 ### Commas
+
 - Put the comma at the end of the line.
-- Don't put the comma at the end of the last property.
+- Don't start with comma.
+- Don't put the comma at the end of the last property. [Trailing commas in object literals are legal in ECMAScript 5](http://www.2ality.com/2013/07/trailing-commas.html), but don't use it for the time being.
     
 ```js
 // Bad
@@ -273,6 +276,7 @@ var map = {
 - Dont't use the increment operator.
 - Don't calculate the length on each iteration.
 - Don't put semicolon at the end of the for statement.
+- Put opening brace on the same line.
 - Put a space between 'for' and '('.
 - Put a space between ')' and '{'.
 
@@ -284,6 +288,12 @@ for(i = 0; i < foo.length; i++){
 
 // Bad
 for(var i = 0; i < foo.length; i++){
+    console.log('foobar');
+};
+
+// Bad
+for(i = 0; i < foo.length; i++)
+{
     console.log('foobar');
 };
 
@@ -316,6 +326,7 @@ for·(x in foo)·{
 ### while
 - Don't calculate the length on each iteration.
 - Don't put semicolon at the end of the for statement.
+- Put opening brace on the same line.
 - Put a space between 'while' and '('.
 - Put a space between ')' and '{'.
 
@@ -324,6 +335,15 @@ for·(x in foo)·{
 var i = 0;
 
 while(i < foo.length){
+    console.log('foobar');
+    i++;
+};
+
+// Bad
+var i = 0;
+
+while(i < foo.length)
+{
     console.log('foobar');
     i++;
 };
@@ -340,6 +360,7 @@ while·(i < foo.length)·{
 ### do...while
 - Put semicolon at the end of the do...while statement.
 - Don't calculate the length on each iteration.
+- Put opening brace on the same line.
 - Put a space between 'do' and '{'.
 - Put a space between '}' and 'while'.
 - Put a space between 'while' and '('.
@@ -350,6 +371,15 @@ while·(i < foo.length)·{
 var i = 0;
 
 do{
+   i++;
+   document.write(i);
+}while (i < 5)
+
+// Bad
+var i = 0;
+
+do
+{
    i++;
    document.write(i);
 }while (i < 5)
@@ -381,6 +411,28 @@ arr.forEach(function (x) {
 ## Modules
 ### [WIP]
 
+## Linting
+
+Use [JSLint](http://www.jslint.com) or [JSHint](http://www.jshint.com) to 
+- detect errors and potential problems;
+- improves your quality code;
+- avoids unused variables;
+- identifies problematic styles and patterns in your code;
+- reduces any syntax confusion.
+
+Use `jslint` with the following configuration:
+
+    /*jslint ass: true, nomen: true, regexp: true, todo: true, indent: 4 */
+
+
+Use `jshint` with the following configuration:
+
+```js
+{
+  "expr": true,
+  "indent" 4
+}
+```
 
 ## License
 
