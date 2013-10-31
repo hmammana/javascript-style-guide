@@ -376,7 +376,7 @@ var i = 0;
 
 do{
    i++;
-   document.write(i);
+   console.log(i);
 }while (i < 5)
 
 // Bad
@@ -385,7 +385,7 @@ var i = 0;
 do
 {
    i++;
-   document.write(i);
+   console.log(i);
 }while (i < 5)
 
 // Good
@@ -393,7 +393,7 @@ var i = 0;
 
 do·{
    i += 1;
-   document.write(i);
+   console.log(i);
 }·while·(i < 5);
 ```
 
