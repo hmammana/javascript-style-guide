@@ -30,7 +30,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 - [Loops](#loops)
 - Events
 - Control Flow / Conditionals
-- Modules
+- Module Pattern
 - [Linting](#linting)
 
 ## Scaffolding
@@ -408,7 +408,7 @@ arr.forEach(function (x) {
 ## Control Flow / Conditionals
 ### [WIP]
 
-## Modules
+## Module Pattern
 ### [WIP]
 
 ## Linting
