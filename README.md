@@ -439,7 +439,7 @@ Use `jshint` with the following configuration:
     "latedef": true,
     "newcap": true,
     "noarg": true,
-    "plusplus"> true,
+    "plusplus": true,
     "quotmark": "single",
     "undef": true,
     "unused": true,
