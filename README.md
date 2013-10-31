@@ -112,7 +112,7 @@ var map = {
     ```
 
 - Don't put semicolons at the end of
-    - loops statements (`for`, `for...in`, `while`, `do...while`)
+    - loops statements (`for`, `for...in` and `while`)
 
         ```js
         // Bad
