@@ -16,6 +16,10 @@ By writing clean code, we are able to:
 > "Consistent code, even when written by a team, should look like one person wrote it."
 by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifiers/)
 
+Based on:
+- [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do)
+- [Popular Coding Convention on Github](http://sideeffect.kr/popularconvention/#javascript)
+
 ## Table of contents
 
 - Scaffolding
