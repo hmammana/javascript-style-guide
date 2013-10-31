@@ -429,8 +429,34 @@ Use `jshint` with the following configuration:
 
 ```js
 {
-  "expr": true,
-  "indent" 4
+    "curly": true,
+    "eqeqeq": true,
+    "es3": true,
+    "forin": true,
+    "freeze": true,
+    "immed": true,
+    "indent": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "plusplus"> true,
+    "quotmark": "single",
+    "undef": true,
+    "unused": true,
+    "strict": true,
+    "trailing": true,
+    "asi": true,
+    "eqnull": true,
+    "evil": true,
+    "expr": true,
+    "funcscope": true,
+    "globalstrict": true,
+    "laxcomma": true,
+    "loopfunc": true,
+    "smarttabs": true,
+    "shadow": true,
+    "sub": true,
+    "supernew": true  
 }
 ```
 
