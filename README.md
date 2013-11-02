@@ -33,7 +33,7 @@ Based on:
 - [Loops](#loops)
 - Events
 - Control Flow / Conditionals
-- Module Pattern
+- [Module Pattern](#module-pattern)
 - [Linting](#linting)
 
 ## Comments 
@@ -409,7 +409,22 @@ arr.forEach(function (x) {
 ### [WIP]
 
 ## Module Pattern
-### [WIP]
+- Should start with an Immediately-Invoked Function Expression (IIFE).
+- Use `'use strict';` at the top of the IIFE.
+- Create the component into a file with the same name.
+
+```js
+// myComponent.js
+(function (window) {
+    'use strict';
+    
+    var myComponent = {};
+
+    // Expose component
+    window.myComponent = myComponent;
+    
+}(this));
+```
 
 ## Linting
 
