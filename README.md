@@ -22,7 +22,6 @@ Based on:
 
 ## Table of contents
 
-- Scaffolding
 - Comments 
 - [Spacing](#spacing)
 - [Commas & Semicolons](#commas--semicolons)
@@ -36,9 +35,6 @@ Based on:
 - Control Flow / Conditionals
 - Module Pattern
 - [Linting](#linting)
-
-## Scaffolding
-### [WIP]
 
 ## Comments 
 ### [WIP]
