@@ -412,6 +412,7 @@ arr.forEach(function (x) {
 - Should start with an Immediately-Invoked Function Expression (IIFE).
 - Use `'use strict';` at the top of the IIFE.
 - Create the component into a file with the same name.
+- Keep your components small.
 
 ```js
 // myComponent.js
