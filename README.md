@@ -51,7 +51,7 @@ Based on:
  * clone(object);
  */
 function clone(obj) {
-        // TODO: We need to develop it.
+    // TODO: We need to develop it.
 };
 ```
 
