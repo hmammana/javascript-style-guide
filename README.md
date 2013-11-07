@@ -452,19 +452,19 @@ arr.forEach(function (x) {
 
 ## Linting
 
-Use [JSLint](http://www.jslint.com) or [JSHint](http://www.jshint.com) to 
-- detect errors and potential problems;
-- improves your quality code;
-- avoids unused variables;
-- identifies problematic styles and patterns in your code;
-- reduces any syntax confusion.
+- Use [JSLint](http://www.jslint.com) or [JSHint](http://www.jshint.com) to:
+    - detect errors and potential problems;
+    - improves your quality code;
+    - avoids unused variables;
+    - identifies problematic styles and patterns in your code;
+    - reduces any syntax confusion.
 
-Use `jslint` with the following configuration:
+- Use `jslint` with the following configuration:
 
-    /*jslint ass: true, nomen: true, regexp: true, todo: true, indent: 4 */
+        /*jslint ass: true, nomen: true, regexp: true, todo: true, indent: 4 */
 
 
-Use `jshint` with the following configuration:
+- Use `jshint` with the following configuration:
 
 ```js
 {
