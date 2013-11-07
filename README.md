@@ -3,7 +3,7 @@
 MercadoLibre JavaScript Style Guide.
 
 ## Intro
-The main goal of this guide is to set standards for writing and scaffolding our JavaScript files and modules, helping the readability and maintainability of our code. By doing this, we can significantly reduce the time required to understand any front-end implementation.
+The main goal of this guide is to set standards for writing our JavaScript files and components, helping the readability and maintainability of our code. By doing this, we can significantly reduce the time required to understand any front-end implementation.
 
 By writing clean code, we are able to:
 
@@ -425,9 +425,12 @@ arr.forEach(function (x) {
 ### [WIP]
 
 ## Module Pattern
+- Create a component into a file with the same name.
 - Should start with an Immediately-Invoked Function Expression (IIFE).
 - Use `'use strict';` at the top of the IIFE.
-- Create the component into a file with the same name.
+- Declare methods on its `prototype` property.
+- Private members should be named with a trailing underscore.
+- Use `events` instead of `callbacks`.
 - Keep your components small.
 
 ```js
@@ -435,10 +438,14 @@ arr.forEach(function (x) {
 (function (window) {
     'use strict';
     
-    var myComponent = {};
-
+    function MyComponent() {...};
+    
+    MyComponent.prototype._private = function () {...};
+    
+    MyComponent.prototype.public = function () {...};
+    
     // Expose component
-    window.myComponent = myComponent;
+    window.MyComponent = MyComponent;
     
 }(this));
 ```
