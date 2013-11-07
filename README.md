@@ -22,7 +22,7 @@ Based on:
 
 ## Table of contents
 
-- Comments 
+- [Comments](#comments)
 - [Spacing](#spacing)
 - [Commas & Semicolons](#commas--semicolons)
 - [Literals](#literals)
@@ -37,7 +37,23 @@ Based on:
 - [Linting](#linting)
 
 ## Comments 
-### [WIP]
+- All your code should be documented.
+- Use single-line comment to add hints, notes, suggestions or warnings.
+- Use multiple-line comment for formal documentation.
+- Use [JSDoc3](http://usejsdoc.org/).
+
+```js
+/**
+ * Returns a shallow-copied clone of a given object.
+ * @param {Object} obj A given object to clone.
+ * @returns {Object}
+ * @example
+ * clone(object);
+ */
+function clone(obj) {
+        // TODO: We need to develop it.
+};
+```
 
 ## Spacing
 - Use 4 spaces for indentation. Don't use tabs.
