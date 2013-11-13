@@ -106,7 +106,9 @@ var map = {
     'bar': 'bar',
     'foobar': 'foobar',
 };
+```
 
+```js
 // DO
 var map = {
     'foo': 'foo',
@@ -124,7 +126,9 @@ var map = {
         var foo = 'foobar'
         return foo
     }())
+    ```
 
+    ```js
     // DO
     (function () {
         var foo = 'foobar';
@@ -140,7 +144,9 @@ var map = {
         for (var i = 0; i < 10; i += 1) {
             console.log('foobar');
         };
-
+        ```
+        
+        ```js
         // DO
         for (var i = 0; i < 10; i += 1) {
             console.log('foobar');
@@ -154,7 +160,9 @@ var map = {
         if (foo !== undefined) {
             console.log('foobar');
         };
-
+        ```
+        
+        ```js
         // DO
         if (foo !== undefined) {
             console.log('foobar');
@@ -168,7 +176,9 @@ var map = {
         function foo() {
             console.log('foobar');
         };
-
+        ```
+        
+        ```js
         // DO
         function foo() {
             console.log('foobar');
@@ -181,7 +191,9 @@ var map = {
     ```js
     // DON'T
     var foo = new Array();
-
+    ```
+    
+    ```js
     // DO
     var foo = [];
     ```
@@ -190,7 +202,9 @@ var map = {
     ```js
     // DON'T
     var foo = new Object();
-
+    ```
+    
+    ```js
     // DO
     var foo = {};
     ```
@@ -203,7 +217,9 @@ var map = {
     ```js
     // DON'T
     foo||bar;
-
+    ```
+    
+    ```js
     // DO
     foo·||·baz;
     ```
@@ -214,7 +230,9 @@ var map = {
     ```js
     // DON'T
     foo++;
-
+    ```
+    
+    ```js
     // DO
     foo += 1;
     ```
@@ -223,7 +241,9 @@ var map = {
     ```js
     // DON'T
     (1+2)*3;
-
+    ```
+    
+    ```js
     // DO
     (1·+·2)·*·3;
     ```
@@ -236,7 +256,9 @@ var map = {
     ```js
     // DON'T
     var foo='bar';
-
+    ```
+    
+    ```js
     // DO
     var foo·=·'bar';
     ```
@@ -250,7 +272,9 @@ var map = {
 
     // DON'T
     var foo, bar, baz;
-
+    ```
+    
+    ```js
     // DO
     var foo,
         bar,
@@ -261,7 +285,9 @@ var map = {
     ```js
     // DON'T
     var container = $('#foo');
-
+    ```
+    
+    ```js
     // DO
     var $container = $('#foo');
     ```
@@ -272,7 +298,9 @@ var map = {
     var foo;
     bar();
     var baz = 'example';
-
+    ```
+    
+    ```js
     // DO
     var foo,
         baz;
@@ -324,7 +352,9 @@ for(x in foo){
 for(var x in foo){
     console.log('foobar');
 };
+```
 
+```js
 // DO
 var i = 0,
     len = foo.length;
@@ -365,7 +395,9 @@ while(i < foo.length)
     console.log('foobar');
     i++;
 };
+```
 
+```js
 // DO
 var i = 0;
 
@@ -401,7 +433,9 @@ do
    i++;
    console.log(i);
 }while (i < 5)
+```
 
+```js
 // DO
 var i = 0;
 
