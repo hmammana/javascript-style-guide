@@ -61,22 +61,24 @@ function clone(obj) {
 - Don't put whitespace at the end of line or on blank lines.
 
 ```js
-// Bad
+// DON'T
 function foo() {
 ----console.log('foobar');
 };
 
-// Bad
+// DON'T
 function foo() {
 ··console.log('foobar');
 };
 
-// Bad
+// DON'T
 function foo() {
     console.log('foobar');····
 };··
+```
 
-// Good!
+```js
+// DO
 function foo() {
 ····console.log('foobar');
 };
@@ -91,21 +93,21 @@ function foo() {
 - Don't put the comma at the end of the last property. [Trailing commas in object literals are legal in ECMAScript 5](http://www.2ality.com/2013/07/trailing-commas.html), but don't use it for the time being.
     
 ```js
-// Bad
+// DON'T
 var map = {
     'foo': 'foo'
   , 'bar': 'bar'
   , 'foobar': 'foobar'
 };
 
-// Bad
+// DON'T
 var map = {
     'foo': 'foo',
     'bar': 'bar',
     'foobar': 'foobar',
 };
 
-// Good :)
+// DO
 var map = {
     'foo': 'foo',
     'bar': 'bar',
@@ -117,13 +119,13 @@ var map = {
 
 - Always put a semicolon at the end of the line.
     ```js
-    // Bad
+    // DON'T
     (function () {
         var foo = 'foobar'
         return foo
     }())
 
-    // Good
+    // DO
     (function () {
         var foo = 'foobar';
         return foo;
@@ -134,12 +136,12 @@ var map = {
     - loops statements (`for`, `for...in` and `while`)
 
         ```js
-        // Bad
+        // DON'T
         for (var i = 0; i < 10; i += 1) {
             console.log('foobar');
         };
 
-        // Good
+        // DO
         for (var i = 0; i < 10; i += 1) {
             console.log('foobar');
         }
@@ -148,12 +150,12 @@ var map = {
     - conditionals statements (`if...else`, `switch`)
 
         ```js
-        // Bad
+        // DON'T
         if (foo !== undefined) {
             console.log('foobar');
         };
 
-        // Good
+        // DO
         if (foo !== undefined) {
             console.log('foobar');
         }
@@ -162,12 +164,12 @@ var map = {
     - funcions declarations
 
         ```js
-        // Bad
+        // DON'T
         function foo() {
             console.log('foobar');
         };
 
-        // Good
+        // DO
         function foo() {
             console.log('foobar');
         }
@@ -177,19 +179,19 @@ var map = {
 
 - Use the array literal notation.
     ```js
-    // Bad
+    // DON'T
     var foo = new Array();
 
-    // Good
+    // DO
     var foo = [];
     ```
 
 - Use the object literal notation.
     ```js
-    // Bad
+    // DON'T
     var foo = new Object();
 
-    // Good
+    // DO
     var foo = {};
     ```
 
@@ -199,10 +201,10 @@ var map = {
 
 - Use one space between operators.
     ```js
-    // Bad
+    // DON'T
     foo||bar;
 
-    // Good
+    // DO
     foo·||·baz;
     ```
 
@@ -210,19 +212,19 @@ var map = {
 
 - Use the assignment operator instead the increment or decrement operator.
     ```js
-    // Bad
+    // DON'T
     foo++;
 
-    // Good
+    // DO
     foo += 1;
     ```
 
 - Use one space between operators.
     ```js
-    // Bad
+    // DON'T
     (1+2)*3;
 
-    // Good
+    // DO
     (1·+·2)·*·3;
     ```
 
@@ -232,24 +234,24 @@ var map = {
 - Name it in *lowerCamelCase*.
 - Use one space before and after assignment.
     ```js
-    // Bad
+    // DON'T
     var foo='bar';
 
-    // Good
+    // DO
     var foo·=·'bar';
     ```
 
 - Declare many variables in one statement. Use different lines for each variable.
     ```js
-    // Bad
+    // DON'T
     var foo;
     var bar;
     var baz;
 
-    // Bad
+    // DON'T
     var foo, bar, baz;
 
-    // Good
+    // DO
     var foo,
         bar,
         baz;
@@ -257,21 +259,21 @@ var map = {
 
 - Begin with $ the name of variables that contains a jQuery/Zepto element.
     ```js
-    // Bad
+    // DON'T
     var container = $('#foo');
 
-    // Good
+    // DO
     var $container = $('#foo');
     ```
 
 - Define all variables on top.
     ```js
-    // Bad
+    // DON'T
     var foo;
     bar();
     var baz = 'example';
 
-    // Good
+    // DO
     var foo,
         baz;
     bar();
@@ -297,33 +299,33 @@ var map = {
 - Put a space between ')' and '{'.
 
 ```js
-// Bad
+// DON'T
 for(i = 0; i < foo.length; i++){
     console.log('foobar');
 };
 
-// Bad
+// DON'T
 for(var i = 0; i < foo.length; i++){
     console.log('foobar');
 };
 
-// Bad
+// DON'T
 for(i = 0; i < foo.length; i++)
 {
     console.log('foobar');
 };
 
-// Bad
+// DON'T
 for(x in foo){
     console.log('foobar');
 };
 
-// Bad
+// DON'T
 for(var x in foo){
     console.log('foobar');
 };
 
-// Good
+// DO
 var i = 0,
     len = foo.length;
 
@@ -331,7 +333,7 @@ for·(i; i < len; i += 1)·{
     console.log('foobar');
 }
 
-// Good
+// DO
 var x;
 
 for·(x in foo)·{
@@ -347,7 +349,7 @@ for·(x in foo)·{
 - Put a space between ')' and '{'.
 
 ```js
-// Bad
+// DON'T
 var i = 0;
 
 while(i < foo.length){
@@ -355,7 +357,7 @@ while(i < foo.length){
     i++;
 };
 
-// Bad
+// DON'T
 var i = 0;
 
 while(i < foo.length)
@@ -364,7 +366,7 @@ while(i < foo.length)
     i++;
 };
 
-// Good
+// DO
 var i = 0;
 
 while·(i < foo.length)·{
@@ -383,7 +385,7 @@ while·(i < foo.length)·{
 - Put a space between ')' and '{'.
 
 ```js
-// Bad
+// DON'T
 var i = 0;
 
 do{
@@ -391,7 +393,7 @@ do{
    console.log(i);
 }while (i < 5)
 
-// Bad
+// DON'T
 var i = 0;
 
 do
@@ -400,7 +402,7 @@ do
    console.log(i);
 }while (i < 5)
 
-// Good
+// DO
 var i = 0;
 
 do·{
