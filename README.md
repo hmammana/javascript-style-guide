@@ -42,100 +42,98 @@ Based on:
 - Use multiple-line comment for formal documentation.
 - Use [JSDoc3](http://usejsdoc.org/).
 
-```js
-/**
- * Returns a shallow-copied clone of a given object.
- * @param {Object} obj A given object to clone.
- * @returns {Object}
- * @example
- * clone(object);
- */
-function clone(obj) {
-    // TODO: We need to develop it.
-};
-```
+    ```js
+    /**
+     * Returns a shallow-copied clone of a given object.
+     * @param {Object} obj A given object to clone.
+     * @returns {Object}
+     * @example
+     * clone(object);
+     */
+    function clone(obj) {
+        // TODO: We need to develop it.
+    };
+    ```
 
 ## Spacing
-- Use 4 spaces for indentation. Don't use tabs.
-- Don't mix spaces and tabs.
 - Don't put whitespace at the end of line or on blank lines.
 
-```js
-// DON'T
-function foo() {
-----console.log('foobar');
-};
+    ```js
+    // DON'T
+    function foo() {
+        console.log('foobar');····
+    };··
+    ```
 
-// DON'T
-function foo() {
-··console.log('foobar');
-};
+- Don't mix spaces and tabs.
 
-// DON'T
-function foo() {
-    console.log('foobar');····
-};··
-```
+    ```js
+    // DON'T
+    function foo() {
+    ····console.log('foobar');
+    ----console.log('bar');
+    };
+    ```
 
-```js
-// DO
-function foo() {
-····console.log('foobar');
-};
-```
+- Use 4 spaces for indentation. Don't use tabs.
+
+    ```js
+    // DON'T
+    function foo() {
+    ----console.log('foobar');
+    };
+
+    // DON'T
+    function foo() {
+    ··console.log('foobar');
+    };
+    ```
+
+    ```js
+    // DO
+    function foo() {
+    ····console.log('foobar');
+    };
+    ```
 
 ## Commas & Semicolons
 
 ### Commas
 
-- Put the comma at the end of the line.
 - Don't start with comma.
-- Don't put the comma at the end of the last property. [Trailing commas in object literals are legal in ECMAScript 5](http://www.2ality.com/2013/07/trailing-commas.html), but don't use it for the time being.
-    
-```js
-// DON'T
-var map = {
-    'foo': 'foo'
-  , 'bar': 'bar'
-  , 'foobar': 'foobar'
-};
 
-// DON'T
-var map = {
-    'foo': 'foo',
-    'bar': 'bar',
-    'foobar': 'foobar',
-};
-```
-
-```js
-// DO
-var map = {
-    'foo': 'foo',
-    'bar': 'bar',
-    'foobar': 'foobar'
-};
-```
-
-### Semicolons
-
-- Always put a semicolon at the end of the line.
     ```js
     // DON'T
-    (function () {
-        var foo = 'foobar'
-        return foo
-    }())
+    var map = {
+        'foo': 'foo'
+      , 'bar': 'bar'
+      , 'foobar': 'foobar'
+    };
     ```
+
+- Don't put the comma at the end of the last property. [Trailing commas in object literals are legal in ECMAScript 5](http://www.2ality.com/2013/07/trailing-commas.html), but don't use it for the time being.
+    
+    ```js
+    // DON'T
+    var map = {
+        'foo': 'foo',
+        'bar': 'bar',
+        'foobar': 'foobar',
+    };
+    ```
+
+- Put the comma at the end of the line.
 
     ```js
     // DO
-    (function () {
-        var foo = 'foobar';
-        return foo;
-    }());
+    var map = {
+        'foo': 'foo',
+        'bar': 'bar',
+        'foobar': 'foobar'
+    };
     ```
 
+### Semicolons
 - Don't put semicolons at the end of
     - loops statements (`for`, `for...in` and `while`)
 
@@ -145,7 +143,7 @@ var map = {
             console.log('foobar');
         };
         ```
-        
+
         ```js
         // DO
         for (var i = 0; i < 10; i += 1) {
@@ -185,6 +183,23 @@ var map = {
         }
         ```
 
+- Always put a semicolon at the end of the line.
+
+    ```js
+    // DON'T
+    (function () {
+        var foo = 'foobar'
+        return foo
+    }())
+    ```
+
+    ```js
+    // DO
+    (function () {
+        var foo = 'foobar';
+        return foo;
+    }());
+    ```
 ## Literals
 
 - Use the array literal notation.
@@ -251,8 +266,14 @@ var map = {
 ## Variables
 
 - Don't use global variables.
+
+    ```js
+    // DON'T
+    foo = 'bar';
+    ```
 - Name it in *lowerCamelCase*.
 - Use one space before and after assignment.
+
     ```js
     // DON'T
     var foo='bar';
@@ -264,6 +285,7 @@ var map = {
     ```
 
 - Declare many variables in one statement. Use different lines for each variable.
+
     ```js
     // DON'T
     var foo;
@@ -282,6 +304,7 @@ var map = {
     ```
 
 - Begin with $ the name of variables that contains a jQuery/Zepto element.
+
     ```js
     // DON'T
     var container = $('#foo');
@@ -318,58 +341,58 @@ var map = {
 
 ### for
 
-- Declare variables outside of the for statement.
 - Dont't use the increment operator.
 - Don't calculate the length on each iteration.
 - Don't put semicolon at the end of the for statement.
+- Declare variables outside of the for statement.
 - Put opening brace on the same line.
 - Put a space between 'for' and '('.
 - Put a space between ')' and '{'.
 
-```js
-// DON'T
-for(i = 0; i < foo.length; i++){
-    console.log('foobar');
-};
+    ```js
+    // DON'T
+    for(i = 0; i < foo.length; i++){
+        console.log('foobar');
+    };
 
-// DON'T
-for(var i = 0; i < foo.length; i++){
-    console.log('foobar');
-};
+    // DON'T
+    for(var i = 0; i < foo.length; i++){
+        console.log('foobar');
+    };
 
-// DON'T
-for(i = 0; i < foo.length; i++)
-{
-    console.log('foobar');
-};
+    // DON'T
+    for(i = 0; i < foo.length; i++)
+    {
+        console.log('foobar');
+    };
 
-// DON'T
-for(x in foo){
-    console.log('foobar');
-};
+    // DON'T
+    for(x in foo){
+        console.log('foobar');
+    };
 
-// DON'T
-for(var x in foo){
-    console.log('foobar');
-};
-```
+    // DON'T
+    for(var x in foo){
+        console.log('foobar');
+    };
+    ```
 
-```js
-// DO
-var i = 0,
-    len = foo.length;
+    ```js
+    // DO
+    var i = 0,
+        len = foo.length;
 
-for·(i; i < len; i += 1)·{
-    console.log('foobar');
-}
+    for·(i; i < len; i += 1)·{
+        console.log('foobar');
+    }
 
-// DO
-var x;
+    // DO
+    var x;
 
-for·(x in foo)·{
-    console.log('foobar');
-}
-```
+    for·(x in foo)·{
+        console.log('foobar');
+    }
+    ```
 
 ### while
 - Don't calculate the length on each iteration.
@@ -378,34 +401,34 @@ for·(x in foo)·{
 - Put a space between 'while' and '('.
 - Put a space between ')' and '{'.
 
-```js
-// DON'T
-var i = 0;
+    ```js
+    // DON'T
+    var i = 0;
 
-while(i < foo.length){
-    console.log('foobar');
-    i++;
-};
+    while(i < foo.length){
+        console.log('foobar');
+        i++;
+    };
 
-// DON'T
-var i = 0;
+    // DON'T
+    var i = 0;
 
-while(i < foo.length)
-{
-    console.log('foobar');
-    i++;
-};
-```
+    while(i < foo.length)
+    {
+        console.log('foobar');
+        i++;
+    };
+    ```
 
-```js
-// DO
-var i = 0;
+    ```js
+    // DO
+    var i = 0;
 
-while·(i < foo.length)·{
-    console.log('foobar');
-    i += 1;
-}
-```
+    while·(i < foo.length)·{
+        console.log('foobar');
+        i += 1;
+    }
+    ```
 
 ### do...while
 - Put semicolon at the end of the do...while statement.
@@ -416,43 +439,43 @@ while·(i < foo.length)·{
 - Put a space between 'while' and '('.
 - Put a space between ')' and '{'.
 
-```js
-// DON'T
-var i = 0;
+    ```js
+    // DON'T
+    var i = 0;
 
-do{
-   i++;
-   console.log(i);
-}while (i < 5)
+    do{
+       i++;
+       console.log(i);
+    }while (i < 5)
 
-// DON'T
-var i = 0;
+    // DON'T
+    var i = 0;
 
-do
-{
-   i++;
-   console.log(i);
-}while (i < 5)
-```
+    do
+    {
+       i++;
+       console.log(i);
+    }while (i < 5)
+    ```
 
-```js
-// DO
-var i = 0;
+    ```js
+    // DO
+    var i = 0;
 
-do·{
-   i += 1;
-   console.log(i);
-}·while·(i < 5);
-```
+    do·{
+       i += 1;
+       console.log(i);
+    }·while·(i < 5);
+    ```
 
-### forEach
-- Use `forEach` statement to iterate an array.
+    ### forEach
+    - Use `forEach` statement to iterate an array.
 
-```js
-arr.forEach(function (x) {
-    console.log(x);
-});
-```
+        ```js
+        arr.forEach(function (x) {
+            console.log(x);
+        });
+        ```
 
 ## Events
 ### [WIP]
@@ -469,22 +492,22 @@ arr.forEach(function (x) {
 - Use `events` instead of `callbacks`.
 - Keep your components small.
 
-```js
-// myComponent.js
-(function (window) {
-    'use strict';
-    
-    function MyComponent() {...};
-    
-    MyComponent.prototype._private = function () {...};
-    
-    MyComponent.prototype.public = function () {...};
-    
-    // Expose component
-    window.MyComponent = MyComponent;
-    
-}(this));
-```
+    ```js
+    // myComponent.js
+    (function (window) {
+        'use strict';
+        
+        function MyComponent() {...};
+        
+        MyComponent.prototype._private = function () {...};
+        
+        MyComponent.prototype.public = function () {...};
+        
+        // Expose component
+        window.MyComponent = MyComponent;
+        
+    }(this));
+    ```
 
 ## Linting
 
@@ -502,38 +525,38 @@ arr.forEach(function (x) {
 
 - Use `jshint` with the following configuration:
 
-```js
-{
-    "curly": true,
-    "eqeqeq": true,
-    "es3": true,
-    "forin": true,
-    "freeze": true,
-    "immed": true,
-    "indent": true,
-    "latedef": true,
-    "newcap": true,
-    "noarg": true,
-    "plusplus": true,
-    "quotmark": "single",
-    "undef": true,
-    "unused": true,
-    "strict": true,
-    "trailing": true,
-    "asi": true,
-    "eqnull": true,
-    "evil": true,
-    "expr": true,
-    "funcscope": true,
-    "globalstrict": true,
-    "laxcomma": true,
-    "loopfunc": true,
-    "smarttabs": true,
-    "shadow": true,
-    "sub": true,
-    "supernew": true  
-}
-```
+    ```js
+    {
+        "curly": true,
+        "eqeqeq": true,
+        "es3": true,
+        "forin": true,
+        "freeze": true,
+        "immed": true,
+        "indent": true,
+        "latedef": true,
+        "newcap": true,
+        "noarg": true,
+        "plusplus": true,
+        "quotmark": "single",
+        "undef": true,
+        "unused": true,
+        "strict": true,
+        "trailing": true,
+        "asi": true,
+        "eqnull": true,
+        "evil": true,
+        "expr": true,
+        "funcscope": true,
+        "globalstrict": true,
+        "laxcomma": true,
+        "loopfunc": true,
+        "smarttabs": true,
+        "shadow": true,
+        "sub": true,
+        "supernew": true  
+    }
+    ```
 
 ## License
 
