@@ -28,7 +28,7 @@ Based on:
 - [Literals](#literals)
 - [Operators](#operators)
 - [Variables](#variables)
-- Functions
+- [Functions](#functions)
 - Hoisting
 - [Loops](#loops)
 - Events
@@ -332,7 +332,118 @@ Based on:
     ```
 
 ## Functions
-### [WIP]
+
+### Declaration
+
+- Define all variables at the top of the function body.
+- Indent the function body.
+- Name it in *lowerCamelCase*, unless it be a constructor function. In that case name it in *CamelCase*.
+- Return `this` in all your public methods.
+- Keep the name and the parenthesis together. Use a space only after parenthesis.
+    ```js
+    // DON'T
+    function foo·()·{
+        // ...
+    }
+
+    // DON'T
+    function foo·(){
+        // ...
+    }
+    ```
+    ```js
+    // DO
+    function foo()·{
+        // ...
+    }
+    ```
+
+- On anonymous functions, use a space before and after the parenthesis.
+    ```js
+    // DON'T
+    var foo = function(){
+        // ...
+    }
+    ```
+    ```js
+    // DO
+    var foo = function·()·{
+        // ...
+    }
+    ```
+
+- Don't put semicolon at the end of the function statement.
+    ```js
+    // DON'T
+    function foo() {
+        // ...
+    };
+    ```
+    ```js
+    // DO
+    function foo() {
+        // ...
+    }
+    ```
+
+- Only put a semicolon at the end of the function statement when it's an anonymous function declaration.
+    ```js
+    // DON'T
+    var foo = function () {
+        // ...
+    }
+    ```
+    ```js
+    // DO
+    var foo = function () {
+        // ...
+    };
+    ```
+
+### Execution
+
+- Constructor functions must be executed with `new`.
+- Wrap the entire function execution in parenthesis.
+
+    ```js
+    // DON'T
+    var foo = (function () {
+        // ...
+    })();
+    ```
+
+    ```js
+    // DO
+    var foo = (function () {
+        // ...
+    }());
+    ```
+
+### Scope
+
+- Use `that` to grab the reference to `this` scope.
+    ```js
+    // DO
+    var that = this;
+    ```
+
+- Use `that` only for contexts that `this` can't reach.
+    ```js
+    // DON'T
+    var that = this;
+
+    that.addEventListener('click', function () {
+        that.foo = 'example';
+    });
+    ```
+    ```js
+    // DO
+    var that = this;
+
+    this.addEventListener('click', function () {
+        that.foo = 'example';
+    });
+    ```
 
 ## Hoisting
 ### [WIP]
