@@ -358,7 +358,7 @@ Based on:
     }
     ```
 
-- On anonymous functions, use a space before and after the parenthesis.
+- On function expressions, use a space before and after the parenthesis.
     ```js
     // DON'T
     var foo = function(){
@@ -372,7 +372,7 @@ Based on:
     }
     ```
 
-- Don't put semicolon at the end of the function statement.
+- Don't put semicolon at the end of the function declarations.
     ```js
     // DON'T
     function foo() {
@@ -386,7 +386,7 @@ Based on:
     }
     ```
 
-- Only put a semicolon at the end of the function statement when it's an anonymous function declaration.
+- Only put a semicolon at the end of the function expressions.
     ```js
     // DON'T
     var foo = function () {
