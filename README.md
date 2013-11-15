@@ -29,10 +29,9 @@ Based on:
 - [Operators](#operators)
 - [Variables](#variables)
 - [Functions](#functions)
-- Hoisting
 - [Loops](#loops)
 - Events
-- Control Flow / Conditionals
+- [Conditionals](#conditionals)
 - [Module Pattern](#module-pattern)
 - [Linting](#linting)
 
@@ -445,9 +444,6 @@ Based on:
     });
     ```
 
-## Hoisting
-### [WIP]
-
 ## Loops
 
 ### for
@@ -591,8 +587,122 @@ Based on:
 ## Events
 ### [WIP]
 
-## Control Flow / Conditionals
-### [WIP]
+## Conditionals
+
+- Use one space wrapping the condition parenthesis.
+    ```js
+    // DON'T
+    if(foo){
+        bar();
+    }
+
+    // DON'T
+    if(·foo·){
+        bar();
+    }
+    ```
+    ```js
+    // DO
+    if·(foo)·{
+        bar();
+    }
+    ```
+
+- Use a new line for statements.
+    ```js
+    // DON'T
+    if (foo) { bar(); }
+    ```
+    ```js
+    // DO
+    if (foo) {
+        bar();
+    }
+    ```
+
+- Use curly braces always.
+    ```js
+    // DON'T
+    if (foo) bar();
+
+    // DON'T
+    if (foo)
+        bar();
+    ```
+    ```js
+    // DO
+    if (foo) {
+        bar();
+    }
+    ```
+
+- Don't put semicolon at the end.
+    ```js
+    // DON'T
+    if (foo) {
+        bar();
+    };
+    ```
+    ```js
+    // DO
+    if (foo) {
+        bar();
+    }
+    ```
+
+- Compare with `undefined` when it's not a boolean.
+    ```js
+    // DON'T
+    if (baz) {
+        foo();
+    }
+    ```
+    ```js
+    // DO
+    if (baz !== undefined) {
+        foo();
+    }
+    ```
+
+- Use `===` and `!==` operators.
+    ```js
+    // DON'T
+    if (baz == 'example') {
+        foo();
+    }
+    ```
+    ```js
+    // DO
+    if (baz === 'example') {
+        foo();
+    }
+    ```
+
+- Avoid `else if` when possible. Use `if` and `else` instead.
+    ```js
+    // DON'T
+    if (foo !== undefined) {
+        // statement 1
+    } else if (bar !== undefined) {
+        // statement 2
+    } else {
+        // statement 3
+    }
+    ```
+    ```js
+    // DO
+    if (foo !== undefined) {
+        // statement 1
+        return;
+    }
+
+    if (bar !== undefined) {
+        // statement 2
+        return;
+    }
+
+    // statement 3
+    ```
 
 ## Module Pattern
 - Create a component into a file with the same name.
