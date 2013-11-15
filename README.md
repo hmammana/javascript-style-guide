@@ -30,7 +30,7 @@ Based on:
 - [Variables](#variables)
 - [Functions](#functions)
 - [Loops](#loops)
-- Events
+- [Events](#events)
 - [Conditionals](#conditionals)
 - [Module Pattern](#module-pattern)
 - [Linting](#linting)
@@ -585,7 +585,26 @@ Based on:
         ```
 
 ## Events
-### [WIP]
+
+- Name it in *lowercases* without spaces.
+- Define namespaces on event names.
+    ```js
+    // DON'T
+    $(document).on('click', function () { ... });
+    $(document).on('mouseenter', function () { ... });
+    $(document).on('scroll', function () { ... });
+
+    $(document).off('click');
+    $(document).off('mouseenter');
+    ```
+    ```js
+    // DO
+    $(document).on('click.foo', function () { ... });
+    $(document).on('mouseenter.foo', function () { ... });
+    $(document).on('scroll.bar', function () { ... });
+
+    $(document).off('.foo');
+    ```
 
 ## Conditionals
 
