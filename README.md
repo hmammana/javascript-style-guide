@@ -19,6 +19,7 @@ by [Addy Osmani](http://addyosmani.com/blog/javascript-style-guides-and-beautifi
 Based on:
 - [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do)
 - [Popular Coding Convention on Github](http://sideeffect.kr/popularconvention/#javascript)
+- [Maintainable JavaScript](http://shop.oreilly.com/product/0636920025245.do)
 
 ## Table of contents
 
@@ -264,6 +265,8 @@ Based on:
 
 ## Variables
 
+- Variable names should be nouns (don't worry about length).
+
 - Don't use global variables.
 
     ```js
@@ -331,6 +334,37 @@ Based on:
     ```
 
 ## Functions
+
+### Naming
+- Function names should begin with a verb.
+    
+    ```js
+    // DON'T
+    function name(){
+        // ...
+    }
+    ```
+    ```js
+    // DO
+    function getName(){
+        // ...
+    }
+    ```
+
+- Function return booleans should begin with `is` or `has`.
+    
+    ```js
+    // DON'T
+    function error(){
+        // ...
+    }
+    ```
+    ```js
+    // DO
+    function hasError(){
+        // ...
+    }
+    ```
 
 ### Declaration
 
